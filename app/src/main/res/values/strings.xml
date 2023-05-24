@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ToDo</string>
+
+    <string name="close_app">Close app</string>
+    <string name="dialog_message">AlerDialog</string>
+    <string name="dialog_title">GBAndroidBlogs</string>
+    <string name="success">Success</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+
+    <string name="success_title">Success Title</string>
+    <string name="warning_title">Delete Task</string>
+    <string name="error_title">Error Title</string>
+    <string name="dummy_text">Are you sure you want to delete?</string>
+    <string name="okay">Okay</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="todoname">ToDo Lists</string>
+</resources>

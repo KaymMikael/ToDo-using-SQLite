@@ -1,9 +1,11 @@
 package com.example.todo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
@@ -22,11 +24,14 @@ public class LoadingActivity extends AppCompatActivity {
 
     private SpinKitView spinKitView1;
     private Handler handler;
+    private Notification notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
+        notification = new Notification();
+        notification.scheduleNotification(getApplicationContext());
         spinKitView1 = findViewById(R.id.spinKitView1);
         handler = new Handler();
         handler.postDelayed(new Runnable() {

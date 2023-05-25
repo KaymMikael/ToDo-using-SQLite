@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import android.content.DialogInterface;
+
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,6 +29,7 @@ import com.example.todo.RecyclerViewTouchHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -39,13 +42,11 @@ public class ToDoActivity extends AppCompatActivity implements OnDialogCloseList
     private List<ToDoModel> mList;
     private ToDoAdapter adapter;
 
-    private AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
-
         mRecyclerview = findViewById(R.id.lists);
         fab = findViewById(R.id.fab);
         myDB = new MyDB(ToDoActivity.this);
@@ -117,6 +118,11 @@ public class ToDoActivity extends AppCompatActivity implements OnDialogCloseList
             alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
         }
         alertDialog.show();
+    }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
